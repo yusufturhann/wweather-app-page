@@ -1,0 +1,55 @@
+.header {
+  background-color: #648cff;
+  width: 100%;
+
+  @media only screen and (max-width: 768px) {
+      padding-top: 50px;
+  }
+  
+.nav{
+    
+  label{
+       
+      font-size: 26px;
+      line-height: 70px;
+      top: 0;
+      right: 10px;
+      margin-top: 32px;
+      position: absolute;
+      display: none;
+       
+
+    }
+ }
+#toggle{
+  display: none;
+}
+#toggle:checked + .menu{
+  display: block;
+}
+ @media only screen and(max-width:500px)
+{
+  label{
+      display: block !important;
+      cursor:pointer;
+    }
+    
+
+  
+}
+ 
+
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 30px;
+
+    @media only screen and (max-width: 768px) {
+        flex-direction: column;
+        display: flow-root;
+    }
+    
+  }
+}
