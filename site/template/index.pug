@@ -20,8 +20,6 @@ block content
           button.btn.btn--bottom-right.btn--circle.btn--yellow.btn--sm(type='button') RIO
           button#button2.btn.btn--bottom-left.btn--circle.btn--white.btn--sm(type='button' style='background:#eee url(assets/img/icons/down.png) no-repeat left top;  background-position: center;')
            
-      
-
           img(src="assets/img/icons/phone.png", alt="promo-img")     
   section.section
     .container
@@ -60,28 +58,17 @@ block content
         h2.title SIMPLE WIDGETS
         p.sm-text Drag and Drop
       .carousel
-          .carousel__content
-            .carousel__item.carousel__item--left
-              img.carousel__img(src='assets/img/icons/left.png')
-            .carousel__item.carousel__item--front
-              img.carousel__img(src='assets/img/icons/center.png')
-            .carousel__item.carousel__item--right
-              img.carousel__img(src='assets/img/icons/right.png')
-          .carousel__content
-            .carousel__item.carousel__item--left
-              img.carousel__img(src='assets/img/icons/left.png')
-            .carousel__item.carousel__item--front
-              img.carousel__img(src='assets/img/icons/center.png')
-            .carousel__item.carousel__item--right
-              img.carousel__img(src='assets/img/icons/right.png')
-            .carousel__nav(data-carousel="slider1")
-          .carousel__content
-            .carousel__item.carousel__item--left
-              img.carousel__img(src='assets/img/icons/left.png')
-            .carousel__item.carousel__item--front
-              img.carousel__img(src='assets/img/icons/center.png')
-            .carousel__item.carousel__item--right
-              img.carousel__img(src='assets/img/icons/right.png')
+        .swiper-container
+          button.carousel__btn.carousel__btn--right.js-swiper-button-next(type="button")
+            img.right(src="assets/img/icons/right-arrow.png" title="right")
+          button.carousel__btn.carousel__btn--left.js-swiper-button-prev(type="button")
+            img.left(src="assets/img/icons/left-arrow.png" title="left")
+
+          .swiper-wrapper
+            .swiper-slide(style="background-image:url(assets/img/icons/left.png)")
+            .swiper-slide(style="background-image:url(assets/img/icons/center.png)")
+            .swiper-slide(style="background-image:url(assets/img/icons/right.png)")
+            .swiper-slide(style="background-image:url(assets/img/icons/left.png)")
   section.section
     .container
       .section__header

@@ -1,6 +1,6 @@
 import jQuery from 'jquery'
-import 'slick-carousel'
+import Swiper from 'swiper'
 
 const $ = jQuery;
 
-export { jQuery, $ }
+export { jQuery, $, Swiper }

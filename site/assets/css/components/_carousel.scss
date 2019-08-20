@@ -1,153 +1,89 @@
 .carousel {
-     position: relative;
-     display: block;
+  position: relative;
+  display: block;
 
-     &__arrow {
-          display: flex;
-     }
+  &__arrow {
+    display: flex;
+  }
 
-     &__img {
-          width: 395px;
-          height: 641px;
+  &__img {
+    width: 100%;
 
-          @media only screen and (max-width: 768px) {
-               width: 119px;
-               margin-left: 19px;
-               height: 200px;
-          }
+    @media only screen and (max-width: 768px) {
+      height: 200px;
+    }
+  }
 
-          
-     }
+  &__content {
+    position: relative;
+  }
 
-     &__content {
-          position: relative;
-          float: left;
-     }
+  &__item {
+    &.push-right {
+      z-index: 0;
+      left: 70%;
+      transform: scale(0.9);
 
-     &__item {
-          width: 370px;
-          position: absolute;
-          top: 0;
-          left: 50%;
-          margin-left: -185px;
-          z-index: 1;
-          transition: all 0.5s;
+      @media only screen and (max-width: 768px) {
+        transform: scale(0.9) translateX(95px);
+      }
+      @media only screen and (max-width: 320px) {
+        transform: scale(0.9) translateX(124px);
+      }
+    }
 
-          &--left {
-               transform: scale(.9) translateX(-200px);
+    &.get-center {
+      left: 32%;
+      transform: scale(1) translateX(230px);
 
-               @media only screen and (max-width: 768px) {
-                    transform: scale(0.9) translateX(-348px);
-                    z-index: 1;
+      @media only screen and (max-width: 768px) {
+        transform: scale(1) translateX(168px);
+        z-index: 3;
+      }
+      @media only screen and (max-width: 320px) {
+        transform: scale(1) translateX(165px);
+        z-index: 3;
+      }
+    }
 
-               }
-               @media only screen and (max-width: 320px) {
-                    transform: scale(0.9) translateX(-280px);
-                    z-index: 1;
+    &.push-left {
+      left: 34%;
+      z-index: 0;
+      transform: scale(0.9);
 
-               }
-          }
+      @media only screen and (max-width: 768px) {
+        transform: scale(0.9) translateX(85px);
+      }
+      @media only screen and (max-width: 320px) {
+        transform: scale(0.9) translateX(84px);
+      }
+    }
+  }
 
-          &--front {
-               position: relative;
+  &__btn {
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    margin-top: -67px;
+    background-color: transparent;
+    border: none;
+  
+    &--left {
+      left: 0;
+    }
 
-               z-index: 2;
+    &--right {
+      right: 0;
+    }
 
-               @media only screen and (max-width: 768px) {
-                    transform: scale(1) translateX(-234px);
-               }
-               @media only screen and (max-width: 320px) {
-                    transform: scale(1) translateX(-178px);
-               }
-          }
-
-          &--right {
-               transform: scale(.9) translateX(172px);
-
-               @media only screen and (max-width: 768px) {
-                    transform: scale(.9) translateX(181px);
-               }
-               @media only screen and (max-width: 320px) {
-                    transform: scale(.9) translateX(184px);
-               }
-
-          }
-
-          &.push-right {
-               z-index: 0;
-               left: 70%;
-               transform: scale(0.9);
-
-               @media only screen and (max-width: 768px) {
-
-                    transform: scale(0.9) translateX(95px);
-
-               }
-               @media only screen and (max-width: 320px) {
-
-                    transform: scale(0.9) translateX(124px);
-
-               }
-          }
-         
-
-          &.get-center {
-               left: 32%;
-               transform: scale(1) translateX(230px);
-
-               @media only screen and (max-width: 768px) {
-                    transform: scale(1) translateX(168px);
-                    z-index: 3;
-               }
-               @media only screen and (max-width: 320px) {
-                    transform: scale(1) translateX(165px);
-                    z-index: 3;
-               }
-
-          }
-
-          &.push-left {
-               left: 34%;
-               z-index: 0;
-               transform: scale(0.9);
-
-               @media only screen and (max-width: 768px) {
-                    transform: scale(0.9) translateX(85px);
-               }
-               @media only screen and (max-width: 320px) {
-                    transform: scale(0.9) translateX(84px);
-               }
-
-          }
-     }
-
-     &__btn {
-          position: absolute;
-          top: 50%;
-          z-index: 2;
-          margin-top: -67px;
-          background-color: transparent;
-          border: none;
-          &--left {
-               left: 0;
-               display: none;
-          }
-
-          &--right {
-               right: 0;
-               
-           
-          }
-
-          &:focus {
-               outline: none;
-          }
-          .right, .left{
-               @media screen and(max-width:720px) {
-                    display: none;
-               }
-           
-           
-          }
-     }
+    &:focus {
+      outline: none;
+    }
+    .right,
+    .left {
+      @media screen and(max-width:720px) {
+        display: none;
+      }
+    }
+  }
 }
